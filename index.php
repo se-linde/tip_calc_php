@@ -1,7 +1,7 @@
 <?php include 'includes/header.php';?>    
 
     
-<h1>Dick's Food Calculator</h1>
+<h1>Tip Calculator</h1>
    
     
         
