@@ -46,9 +46,39 @@ if (isset($POST['investment'])) {
     }
     
     // If the data is valid, perform the calculations and apply the formatting. 
+    if ($error_message == '') {
+        // calculate the future value
+        $future_value = $investment; 
         
+        for ($i = 1, $i <= $years; $i++) {
+            $future_value = $future_value + ($future_value * $interest_rate * 0.01); 
+        }
         
-}
+        // apply currency and percent formatting
+        $investment_f = '$'.number_format($investment, 2); 
+        $years_f = $years; 
+        $yearly_rate_f = $interest_rate.'%'; 
+        $future_value_f = '$'.number_format($future_value_f, 2); 
+        
+        // clear text boxes
+        $investment = ''; 
+        $interest_rate = '';
+        $years = ''; 
+    }
+} else {
     
+    // first request -set default values for all variables. 
+    $investment = ''; 
+    $interest_rate = ''; 
+    $years = ''; 
+    $investment_f = ''; 
+    $years_f = ''; 
+    $yearly_rate_f = ''; 
+    $future_value_f = ''; 
+    
+}
+?>     
+
+
         
 <?php include 'includes/footer.php';?> 
