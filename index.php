@@ -79,6 +79,67 @@ if (isset($POST['investment'])) {
 }
 ?>     
 
+<!-- Here on out is the HTML formatting of the PHP data. --> 
+
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Future Value Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/portal.css" />
+</head> 
+
+    
+<body>
+<main> 
+    
+<h1> Future Value Calculator</h1>    
+<?php if (!empty($error_message)) { ?>
+    <p class="error"> <?php echo $error_message; ?>   </p>
+    <?php } // end if ?> 
+    <form action = "" method="post">
+    
+        <div id="data">
+            <label>Investment Amount:</label>
+            <input type="text" name="investment" 
+                   value="<?php echo htmlspecialchars($investment); ?>"> <br>
+            
+            <label>Yearly Interest Rate: </label>
+            <input type="text" name="interest rate" 
+                   value="<?php echo htmlspecialchars($interest_rate); ?>"> <br>
+            
+            
+            <label>Years:</label>
+            <input type="text" name="years" 
+                   value="<?php echo htmlspecialchars($years); ?>"> <br>
+            
+        </div>
+        
+        <div id="buttons">
+            <label>&nbsp;</label>
+            <input type="submit" value="Calculate"><br>
+        </div>
+        
+    </form>
+    
+    
+        <label>Investment Amount:</label>
+           <span><?php echo htmlspecialchars($investment_f); ?></span>
+            
+            <label>Yearly Interest Rate: </label>
+            <span><?php echo htmlspecialchars($yearly_rate_f); ?></span>
+            
+            
+            <label>Investment Amount:</label>
+            <span><?php echo htmlspecialchars($years_f); ?></span>
+            
+            <label>Investment Amount:</label>
+            <span><?php echo htmlspecialchars($future_value_f); ?></span>
+            
+    
+</main>    
+</body>        
+    
+</html>
 
         
 <?php include 'includes/footer.php';?> 
