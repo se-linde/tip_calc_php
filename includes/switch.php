@@ -6,9 +6,9 @@ include this file at the top 'top.php'!
 
 //place URL & labels in the variable/array here for navigation:
 $nav1['index.php'] = "Home";
-$nav1['bio.php'] = "Bio";
-$nav1['portfolio.php'] = "Portfolio";
-$nav1['contact.php'] = "Contact Us";
+$nav1['http://www.lindese.com/bio.php'] = "Bio";
+$nav1['http://www.lindese.com/portfolio.php'] = "Portfolio";
+$nav1['http://www.lindese.com/contact.php'] = "Contact Us";
 
 
 
@@ -26,18 +26,18 @@ switch(THIS_PAGE)
   $myPageID = "Tip Calculator";
   break;
   
-  case "bio.php":
+  case "http://www.lindese.com/bio.php":
   $myTitle = "Bio Page";
   $myPageID = "Bio Page";
   break;
   
-   case "portfolio.php":
+   case "http://www.lindese.com/portfolio.php":
   $myTitle = "Portfolio Page";
   $myPageID = "Portfolio Page";
   break;
   
         
-  case "contact.php":
+  case "http://www.lindese.com/contact.php":
   $myTitle = "Contact Us Page";
   $myPageID = "Contact Us Page";
   break;     
