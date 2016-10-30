@@ -50,6 +50,26 @@ h3 a {
         text-align: center; 
 }
 
+/* Classes/IDs for PHP apps */ 
+
+.error {
+    background-color: yellow;
+    text-align: center;
+    color: crimson; 
+}
+
+#data {
+    text-align: left;
+    color: blueviolet;
+}
+
+#buttons {
+    text-align: left;
+    color: green;
+}
+
+/* End Classes/IDs for PHP apps. */ 
+
 /* Portfolio page, floating text next to images. */ 
 
 .res {
@@ -187,6 +207,9 @@ h3 a {
 .res span {
  
 }
+
+
+
 
 /* footer */ 
 
