@@ -85,7 +85,7 @@ if (isset($POST['simple'])) {
 	{
         if (is_numeric($given_value)){
             
-    	$tip=(($given_value*0.15)+$given_value);
+    	$tip = (($given_value*0.15)+$given_value);    
     	return $tip;
     
         } else { 
@@ -212,30 +212,52 @@ if(isset($_POST['btn'])) // The form handler.
                         
                     	{
                             setlocale(LC_MONETARY, 'en_US');
-                        	$tip=tip15($given_value);
+                        	$total=tip15($given_value);
+                            $total2 = number_format($total, 2);
+                            $tip = ($total2 - $given_value);
                             $tip2 = number_format($tip, 2);
-                            echo "This is the bill total: $$given_value</br>";        
-                            echo "<b>This is the bill total, plus a 15% tip: $$tip2</b></br>";
+                            
+                            echo "This is the bill total: $$given_value, and tip: $$tip2</br>";        
+                            echo "<b>This is the bill total, plus a 15% tip: $$total2</b></br>";
                         }
         break;
 
         case 'tip18':
                      
                         {
-                        	$tip=tip18($given_value);
+                        	// $tip=tip18($given_value);
+                            // $tip2 = number_format($tip, 2);
+                            // echo "This is the bill total: $$given_value</br>";        
+                            // echo "<b>This is the bill total, plus a 18% tip: $$tip2</b></br>";
+                            
+                            setlocale(LC_MONETARY, 'en_US');
+                        	$total=tip18($given_value);
+                            $total2 = number_format($total, 2);
+                            $tip = ($total2 - $given_value);
                             $tip2 = number_format($tip, 2);
-                            echo "This is the bill total: $$given_value</br>";        
-                            echo "<b>This is the bill total, plus a 18% tip: $$tip2</b></br>";
+                            
+                            echo "This is the bill total: $$given_value, and tip: $$tip2</br>";        
+                            echo "<b>This is the bill total, plus a 18% tip: $$total2</b></br>";
                         }
         break;
         
         case 'tip20':
                       
                         {
-                        	$tip=tip20($given_value);
+                        	// $tip=tip20($given_value);
+                            // $tip2 = number_format($tip, 2);
+                            // echo "This is the bill total: $$given_value</br>";        
+                            // echo "<b>This is the bill total, plus a 20% tip: $$tip2</b></br>";
+                            
+                            setlocale(LC_MONETARY, 'en_US');
+                        	$total=tip20($given_value);
+                            $total2 = number_format($total, 2);
+                            $tip = ($total2 - $given_value);
                             $tip2 = number_format($tip, 2);
-                            echo "This is the bill total: $$given_value</br>";        
-                            echo "<b>This is the bill total, plus a 20% tip: $$tip2</b></br>";
+                            
+                            echo "This is the bill total: $$given_value, and tip: $$tip2</br>";        
+                            echo "<b>This is the bill total, plus a 20% tip: $$total2</b></br>";
+                            
                     	}      
         break;
             
@@ -243,20 +265,38 @@ if(isset($_POST['btn'])) // The form handler.
         case 'tip22':
                         
                     	{
-                        	$tip=tip22($given_value);
+                        	// $tip=tip22($given_value);
+                            // $tip2 = number_format($tip, 2);
+                            // echo "This is the bill total: $$given_value</br>";        
+                            // echo "<b>This is the bill total, plus a 22% tip: $$tip2</b></br>";
+                            
+                            setlocale(LC_MONETARY, 'en_US');
+                        	$total=tip22($given_value);
+                            $total2 = number_format($total, 2);
+                            $tip = ($total2 - $given_value);
                             $tip2 = number_format($tip, 2);
-                            echo "This is the bill total: $$given_value</br>";        
-                            echo "<b>This is the bill total, plus a 22% tip: $$tip2</b></br>";
+                            
+                            echo "This is the bill total: $$given_value, and tip: $$tip2</br>";        
+                            echo "<b>This is the bill total, plus a 22% tip: $$total2</b></br>";
                         }
         break;
 
         case 'tip25':
                      
                         {
-                        	$tip=tip25($given_value);
+                        	// $tip=tip25($given_value);
+                            // $tip2 = number_format($tip, 2);
+                            // echo "This is the bill total: $$given_value</br>";        
+                            // echo "<b>This is the bill total, plus a 25% tip: $$tip2</b></br>";
+                            
+                            setlocale(LC_MONETARY, 'en_US');
+                        	$total=tip25($given_value);
+                            $total2 = number_format($total, 2);
+                            $tip = ($total2 - $given_value);
                             $tip2 = number_format($tip, 2);
-                            echo "This is the bill total: $$given_value</br>";        
-                            echo "<b>This is the bill total, plus a 25% tip: $$tip2</b></br>";
+                            
+                            echo "This is the bill total: $$given_value, and tip: $$tip2</br>";        
+                            echo "<b>This is the bill total, plus a 25% tip: $$total2</b></br>";
                     	}
         break;
                      
@@ -271,7 +311,7 @@ if(isset($_POST['btn'])) // The form handler.
     	</table>
     	</form>
     
-        <p class="error">This calculation was done on <?php echo date('m/d/y'); ?> </p>
+        <p class="error">This calculation was done on <?php echo date('l jS \of F Y h:i:s A'); ?> </p>
     
 </main>    
 </body>        
