@@ -186,7 +186,7 @@ if (isset($POST['simple'])) {
         	</tr>
         	<tr>
             	<td>
-                	<input type="number" name="given_value">
+                	<input type="number" step=".01" name="given_value">
             	</td>
         	</tr>
         	<tr>
