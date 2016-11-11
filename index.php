@@ -165,7 +165,7 @@ if (isset($POST['simple'])) {
 
     <!-- HTML portion of the script. --> 
 
-        <h4>Please type in your bill total, and select the tip value. Then, press the 'Calculate Tip' button to calculate what your total bill will be, plus the selected tip: </h4>
+        <h4>Please type in your bill total, without tax, and select the tip value. Then, press the 'Calculate Tip' button to calculate what your bill will be, plus the selected tip: </h4>
         <p> 
         
 
